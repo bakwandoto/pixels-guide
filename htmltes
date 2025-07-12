@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pixels Leveling Guide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pixels Leveling Guide</h1>
+
+    <div class="calculator">
+      <label>Current Level:
+        <input type="number" id="currentLevel" min="1" max="100" />
+      </label>
+      <label>Target Level:
+        <input type="number" id="targetLevel" min="1" max="100" />
+      </label>
+      <button onclick="calculate()">Calculate</button>
+
+      <div id="results">
+        <!-- hasil kalkulasi akan muncul di sini -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
