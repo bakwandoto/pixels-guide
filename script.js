@@ -32,12 +32,11 @@ fetch('items.json')
   .then(response => response.json())
   .then(data => {
     itemsData = data;
-    console.log("Loaded items:", itemsData);
-   renderItemList(); //
+    renderItemList(); // ✅ ini agar tampil langsung
   })
   .catch(error => console.error('Failed to load items:', error));
 
-  function renderItemList() {
+function renderItemList() {
   const itemList = document.getElementById('itemList');
   itemList.innerHTML = "<h2>Available Items</h2>";
 
@@ -47,5 +46,6 @@ fetch('items.json')
     itemList.appendChild(div);
   });
 }
+
 
 
