@@ -37,3 +37,15 @@ fetch('items.json')
   })
   .catch(error => console.error('Failed to load items:', error));
 
+  function renderItemList() {
+  const itemList = document.getElementById('itemList');
+  itemList.innerHTML = "<h2>Available Items</h2>";
+
+  itemsData.forEach(item => {
+    const div = document.createElement('div');
+    div.innerHTML = `<strong>${item.name}</strong> - EXP: ${item.exp}, Cost: ${item.cost}`;
+    itemList.appendChild(div);
+  });
+}
+
+
