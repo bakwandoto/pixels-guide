@@ -33,7 +33,7 @@ fetch('items.json')
   .then(data => {
     itemsData = data;
     console.log("Loaded items:", itemsData);
-    // kamu bisa tambahkan renderItemList() di sini nanti
+   renderItemList(); //
   })
   .catch(error => console.error('Failed to load items:', error));
 
