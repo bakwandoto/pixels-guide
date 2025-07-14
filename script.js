@@ -26,4 +26,14 @@ function calculate() {
     <p>Items needed: <strong>${itemNeeded}</strong></p>
     <p>Total cost: <strong>${totalCost}</strong> coins</p>
   `;
-}
+let itemsData = [];
+
+fetch('items.json')
+  .then(response => response.json())
+  .then(data => {
+    itemsData = data;
+    console.log("Loaded items:", itemsData);
+    // kamu bisa tambahkan renderItemList() di sini nanti
+  })
+  .catch(error => console.error('Failed to load items:', error));
+
